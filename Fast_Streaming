@@ -1,0 +1,3 @@
+npx serve ~/Downloads --listen 8000
+
+Browse files, play videos, and seek instantly
