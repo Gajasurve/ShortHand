@@ -1,0 +1,12 @@
+gcloud run deploy nadabrahma \
+  --source . \
+  --region asia-southeast1 \
+  --project nadabrahma-run \
+  --allow-unauthenticated \
+  --min-instances=0 \
+  --max-instances=2 \
+  --memory=512Mi \
+  --cpu=1 \
+  --timeout=60 \
+  --concurrency=10 \
+  --set-env-vars "GROQ_API_KEY=${GROQ_API_KEY},UPSTASH_REDIS_URL=${UPSTASH_REDIS_URL},UPSTASH_REDIS_TOKEN=${UPSTASH_REDIS_TOKEN},TURSO_DATABASE_URL=${TURSO_DATABASE_URL},TURSO_AUTH_TOKEN=${TURSO_AUTH_TOKEN},SERPER_API_KEY=${SERPER_API_KEY}"
